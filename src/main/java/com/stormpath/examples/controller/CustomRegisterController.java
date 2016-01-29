@@ -29,7 +29,7 @@ public class CustomRegisterController extends RegisterController {
 
     protected void validate(HttpServletRequest request, HttpServletResponse response, Form form) {
         String password = form.getFieldValue("password");
-        boolean matchesEmailAddress = emailValidator.isValidEmailAddress(password);
+        boolean matchesEmailAddress = EmailValidator.containsEmailAddress(password);
         if (matchesEmailAddress) {
             String msg = "Password cannot contain an email address.";
             throw new PasswordContainsEmailException(msg);

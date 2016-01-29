@@ -25,14 +25,14 @@ public class EmailValidator {
         "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@" +
         "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 
-    private Pattern pattern;
-    private Matcher matcher;
+    private static Pattern pattern;
+    private static Matcher matcher;
 
-    public EmailValidator() {
-        this.pattern = Pattern.compile(EMAIL_PATTERN);
+    static {
+        pattern = Pattern.compile(EMAIL_PATTERN);
     }
 
-    public boolean isValidEmailAddress(String password) {
+    public static boolean containsEmailAddress(String password) {
         if (!Strings.hasText(password)) {
             return false;
         }
