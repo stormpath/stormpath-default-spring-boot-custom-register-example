@@ -23,7 +23,7 @@ authentication. From the login page, you can click the `Create Account`.
 ### Stormpath Setup
 
 Create a Stormpath Account and setup a Stormpath Application as outlined
-[here](https://docs.stormpath.com/rest/product-guide/latest/setup.html)
+[here](https://docs.stormpath.com/rest/product-guide/latest/quickstart.html)
 
 ### Build
 
